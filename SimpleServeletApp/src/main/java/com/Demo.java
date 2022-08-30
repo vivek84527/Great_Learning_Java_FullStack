@@ -48,12 +48,12 @@ public class Demo extends HttpServlet {
 		RequestDispatcher rd2 = request.getRequestDispatcher("index.html");
 		if(email.equals("raj@gmail.com") && password.equals("123")) {
 			pw.println("Successfully login");
-			rd1.forward(request, response);
+			rd1.forward(request, response);// we will get the output of the only target page
 			
 		}
 		else {
 			pw.println("failure try once agin <br/>");
-			rd2.include(request, response);
+			rd2.include(request, response); // source + target as one page
 		}
 	}
 
